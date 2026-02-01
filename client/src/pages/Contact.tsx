@@ -25,8 +25,8 @@ export default function Contact() {
     // Mock submission - no backend needed
     console.log("Form submitted:", data);
     toast({
-      title: "Request Received",
-      description: "We'll be in touch shortly to confirm your appointment.",
+      title: "Thank You!",
+      description: "We will contact you soon.",
       variant: "default",
       duration: 5000
     });
