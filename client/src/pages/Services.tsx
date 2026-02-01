@@ -103,13 +103,23 @@ export default function Services() {
                 <div className="relative bg-white p-2 rounded-3xl shadow-xl border border-slate-100">
                   <img 
                     src={`https://images.unsplash.com/photo-${
-                      idx === 0 ? '1606811841689-23e2e1f2e63a' : 
-                      idx === 1 ? '1609840114012-6463f80d3fb6' : 
+                      idx === 0 ? '1629909613654-28e377c37b09' : 
+                      idx === 1 ? '1606811971618-4486d14f3f99' : 
                       idx === 2 ? '1588776816549-d378372460d8' : 
-                      '1579684385127-1ef15d508118'
+                      '1588776814546-1ffcf47267a5'
                     }?q=80&w=1000&auto=format&fit=crop`}
                     alt={category.title}
                     className="rounded-2xl w-full h-[400px] object-cover"
+                    loading="lazy"
+                    onError={(e) => {
+                      const fallbacks = [
+                        'https://images.unsplash.com/photo-1606811841689-23e2e1f2e63a?q=80&w=1000&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=1000&auto=format&fit=crop'
+                      ];
+                      const current = e.currentTarget.src;
+                      const fallback = fallbacks.find(f => !current.includes(f));
+                      if (fallback) e.currentTarget.src = fallback;
+                    }}
                   />
                 </div>
               </div>

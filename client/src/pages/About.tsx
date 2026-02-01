@@ -77,6 +77,10 @@ export default function About() {
               src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" 
               alt="Our Office" 
               className="relative rounded-[2rem] shadow-xl w-full h-[400px] object-cover"
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = "https://images.unsplash.com/photo-1629909615000-3f9e495c0e1e?q=80&w=2053&auto=format&fit=crop";
+              }}
             />
           </motion.div>
         </section>
@@ -106,6 +110,10 @@ export default function About() {
                       src={member.image} 
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop";
+                      }}
                     />
                   </div>
                   <div className="p-6 bg-white relative z-20">

@@ -100,6 +100,10 @@ export default function Home() {
                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop"
                   alt="Modern Dental Office"
                   className="w-full h-[600px] object-cover"
+                  loading="eager"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1606811841689-23e2e1f2e63a?q=80&w=2068&auto=format&fit=crop";
+                  }}
                 />
                 
                 {/* Floating card */}
