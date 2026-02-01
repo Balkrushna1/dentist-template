@@ -10,15 +10,5 @@
       "source": "/(.*)",
       "destination": "/public/$1"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/.*",
-      "dest": "/index.cjs"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    }
   ]
 }
